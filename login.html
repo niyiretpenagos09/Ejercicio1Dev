@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <h2>Iniciar sesión</h2>
+
+        <form id="formulario">
+
+            <label>Correo:</label>
+            <input type="email" id="correo" value="usuario@gmail.com" required autocomplete="off">
+
+            <br><br>
+
+            <label>Contraseña:</label>
+            <input type="password" id="contraseña" required autocomplete="off">
+
+            <br><br>
+
+            <button type="submit">Ingresar</button>
+
+        </form>
+
+    </div>
+
+    <script>
+
+        const contraseñaCorrecta = "12345";
+
+        document.getElementById("formulario").addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            const contraseña = document.getElementById("contraseña").value;
+
+            if (contraseña == contraseñaCorrecta) {
+
+                window.location.href = "bienvenido.html";
+
+            } else {
+
+                alert("Contraseña incorrecta.");
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>
